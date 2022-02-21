@@ -12,5 +12,8 @@ namespace RecordlessDataAccess.DbModels
         public string Title { get; set; }
         public byte[] Thumbnail { get; set; }
         public byte[] MediaContent { get; set; }
+        public int? ClientId { get; set; }
+
+        public virtual Client Client { get; set; }
     }
 }

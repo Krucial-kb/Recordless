@@ -16,5 +16,7 @@ namespace RecordlessDataAccess.DbModels
         public int? Followers { get; set; }
         public int? ClientId { get; set; }
         public bool? RecordlessPro { get; set; }
+
+        public virtual Client Client { get; set; }
     }
 }

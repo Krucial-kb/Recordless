@@ -10,5 +10,8 @@ namespace RecordlessDataAccess.DbModels
         public int Id { get; set; }
         public int? FollowingId { get; set; }
         public int? UserId { get; set; }
+
+        public virtual Client FollowingNavigation { get; set; }
+        public virtual Client User { get; set; }
     }
 }

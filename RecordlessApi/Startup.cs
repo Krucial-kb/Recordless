@@ -13,6 +13,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RecordlessDataAccess.DbModels;
+using RecordlessDomain.Interfaces;
+using RecordlessDataAccess.Repositories;
 
 namespace RecordlessApi
 {
@@ -28,6 +30,8 @@ namespace RecordlessApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IAccountContract, AccountRepository>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -35,7 +39,7 @@ namespace RecordlessApi
             });
 
             services.AddDbContext<RecordlessContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("RecordlessApiContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("Recordless")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

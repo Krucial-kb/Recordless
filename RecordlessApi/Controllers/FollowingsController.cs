@@ -22,16 +22,16 @@ namespace RecordlessApi.Controllers
 
         // GET: api/Followings
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Following>>> GetFollowing()
+        public async Task<ActionResult<IEnumerable<Following>>> GetFollowings()
         {
-            return await _context.Following.ToListAsync();
+            return await _context.Followings.ToListAsync();
         }
 
         // GET: api/Followings/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Following>> GetFollowing(int id)
         {
-            var following = await _context.Following.FindAsync(id);
+            var following = await _context.Followings.FindAsync(id);
 
             if (following == null)
             {
@@ -77,7 +77,7 @@ namespace RecordlessApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Following>> PostFollowing(Following following)
         {
-            _context.Following.Add(following);
+            _context.Followings.Add(following);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetFollowing", new { id = following.Id }, following);
@@ -87,13 +87,13 @@ namespace RecordlessApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteFollowing(int id)
         {
-            var following = await _context.Following.FindAsync(id);
+            var following = await _context.Followings.FindAsync(id);
             if (following == null)
             {
                 return NotFound();
             }
 
-            _context.Following.Remove(following);
+            _context.Followings.Remove(following);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -101,7 +101,7 @@ namespace RecordlessApi.Controllers
 
         private bool FollowingExists(int id)
         {
-            return _context.Following.Any(e => e.Id == id);
+            return _context.Followings.Any(e => e.Id == id);
         }
     }
 }

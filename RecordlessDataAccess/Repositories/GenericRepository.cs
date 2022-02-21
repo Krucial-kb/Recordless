@@ -1,4 +1,5 @@
-﻿using RecordlessDataAccess.DbModels;
+﻿using Microsoft.Extensions.Logging;
+using RecordlessDataAccess.DbModels;
 using RecordlessDomain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace RecordlessDataAccess.Repositories
 
         private readonly RecordlessContext _context;
 
-        public GenericRepository(RecordlessContext context)
+        public GenericRepository(RecordlessContext context, ILogger logger)
         {
             _context = context;
         }
