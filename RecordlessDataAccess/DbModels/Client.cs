@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace RecordlessApi.DbModels
+namespace RecordlessDataAccess.DbModels
 {
     public partial class Client
     {

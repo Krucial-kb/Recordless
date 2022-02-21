@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using RecordlessApi.DbModels;
+using RecordlessDataAccess.DbModels;
 
 #nullable disable
 
@@ -41,12 +42,12 @@ namespace RecordlessApi.DbModels
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 
-        public DbSet<RecordlessApi.DbModels.Account> Account { get; set; }
+        public DbSet<RecordlessDataAccess.DbModels.Account> Account { get; set; }
 
-        public DbSet<RecordlessApi.DbModels.Client> Client { get; set; }
+        public DbSet<RecordlessDataAccess.DbModels.Client> Client { get; set; }
 
-        public DbSet<RecordlessApi.DbModels.Content> Content { get; set; }
+        public DbSet<RecordlessDataAccess.DbModels.Content> Content { get; set; }
 
-        public DbSet<RecordlessApi.DbModels.Following> Following { get; set; }
+        public DbSet<RecordlessDataAccess.DbModels.Following> Following { get; set; }
     }
 }

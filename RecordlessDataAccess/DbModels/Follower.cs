@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace RecordlessApi.DbModels
+namespace RecordlessDataAccess.DbModels
 {
-    public partial class Following
+    public partial class Follower
     {
         public int Id { get; set; }
-        public int? FollowingId { get; set; }
+        public int? FollowerId { get; set; }
         public int? UserId { get; set; }
     }
 }
