@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace RecordlessDomain.DomainModels
 {
-    internal class ContentModel
+    public class ContentModel
     {
+        public int Id { get; set; }
+        public DateTime? DateCreated { get; set; }
+        public string Title { get; set; }
+        public byte[] Thumbnail { get; set; }
+        public byte[] MediaContent { get; set; }
     }
 }

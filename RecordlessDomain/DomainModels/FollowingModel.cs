@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace RecordlessDomain.DomainModels
 {
-    internal class FollowingModel
+    public class FollowingModel
     {
+        public int Id { get; set; }
+        public int? FollowingId { get; set; }
+        public int? UserId { get; set; }
     }
 }

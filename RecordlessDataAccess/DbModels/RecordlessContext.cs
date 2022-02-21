@@ -1,12 +1,11 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using RecordlessApi.DbModels;
 using RecordlessDataAccess.DbModels;
 
 #nullable disable
 
-namespace RecordlessApi.DbModels
+namespace RecordlessDataAccess.DbModels
 {
     public partial class RecordlessContext : DbContext
     {

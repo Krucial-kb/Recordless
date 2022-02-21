@@ -19,9 +19,4 @@
     <ProjectReference Include="..\RecordlessDomain\RecordlessDomain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-    <Folder Include="Logic\" />
-  </ItemGroup>
-
 </Project>
